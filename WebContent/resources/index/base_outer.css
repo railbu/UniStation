@@ -6,7 +6,8 @@
 #footer-outer .columns:after{clear:both}
 #footer-outer .columns .column{float:left;width:70px;margin-left:0;line-height:220%}#footer-outer .columns .column li h2{font-size:19px}
 #footer-outer .text-center{padding:20px;color:#ccc}
-#index-wrap{background:#c5c4c0 url("../images/banner_bg1.jpg") center top no-repeat fixed}#index-wrap .index-banner{min-width:980px;background:url("") center top no-repeat}#index-wrap .index-banner .index-banner-wrap{width:980px;height:423px;margin:0 auto;position:relative}#index-wrap .index-banner .index-banner-wrap .index-banner-inner{padding:60px;padding-left:10px}#index-wrap .index-banner .index-banner-wrap .index-banner-inner h1{color:#fff;margin-bottom:50px}
+#index-wrap{background:#c5c4c0 url("../images/banner_bg1.jpg") center top no-repeat fixed}
+#index-wrap .index-banner{min-width:980px;background:url("") center top no-repeat}#index-wrap .index-banner .index-banner-wrap{width:980px;height:423px;margin:0 auto;position:relative}#index-wrap .index-banner .index-banner-wrap .index-banner-inner{padding:60px;padding-left:10px}#index-wrap .index-banner .index-banner-wrap .index-banner-inner h1{color:#fff;margin-bottom:50px}
 #index-wrap .index-banner .index-banner-wrap .index-banner-inner p{color:#fbfbfb;width:410px;font-size:24px;line-height:150%;margin-top:20px}
 #index-wrap .index-banner .index-banner-wrap .index-banner-inner .index-banner-action{position:relative;bottom:80px;left:10px;top:10px}#index-wrap .index-banner .index-banner-wrap .index-banner-inner .index-banner-action .btn-success{padding:15px 60px;font-size:23px}
 #index-wrap .index-banner .index-banner-wrap .index-banner-inner .index-banner-action a{color:#fff}

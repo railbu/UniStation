@@ -16,17 +16,17 @@
 <header id="header">
 
     <nav id="header_outer" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-        	&nbsp;<img src="${ctx}/resources/index/logo.png" width="140px" height="75"/>
+        <div class="navbar-header" style="margin-top:-5px;">
+        	&nbsp;<img src="${ctx}/resources/index/logo.png" width="140px" height="85"/>
         </div>
         <div class="collapse navbar-collapse navbar-header-collapse">
 
             <ul id="header_menu" class="nav navbar-nav" >
-                <li class="active">
-                <a href="">首页</a>
+                <li>
+                <a>首页</a>
                 </li>
                 <li>
-                <a href="">功能</a>
+                <a>功能</a>
                 </li>
             </ul>
 

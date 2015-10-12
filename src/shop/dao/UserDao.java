@@ -17,6 +17,7 @@ public class UserDao extends HibernateDaoSupport{
 		Session session = super.getSession();
 		User user = (User) session.createCriteria(User.class)
 				.add(Restrictions.eq("username", username)).uniqueResult();
+
 		return user;
 	}
 	

@@ -27,7 +27,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>crm.model</value>
+				<value>shop.model</value>
 			</list>
 		</property>
 		<property name="configLocations">
