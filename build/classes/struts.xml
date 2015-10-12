@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.objectFactory" 
+		value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	
+	<constant name="struts.custom.i18n.resources" value="messages"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.ui.theme" value="simple"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index" />
+
+		<action name="loginAction_*" method="{1}" class="shop.action.LoginAction">
+		    <result name="input">index.jsp</result>
+		    <result name="admin">/1Admin/home.jsp</result>
+		    <result name="customer">/2Customer/home.jsp</result>
+		</action>
+        
+    </package>
+    
+ 	
+    <!-- Add packages here -->
+
+</struts>
