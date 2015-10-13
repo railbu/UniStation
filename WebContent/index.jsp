@@ -183,7 +183,7 @@
 									<ul class="tab_img">
 									  <li>
 										<div class="view view-first">
-					   		  			   <img src="${ctx}/resources/images/pic1.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${ctx}/<s:property value="pos[0]"/>" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info"> </div>
 								              </div>
@@ -196,7 +196,7 @@
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${ctx}/resources/images/pic2.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${ctx}/<s:property value="pos[1]"/>" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info"> </div>
 								              </div>

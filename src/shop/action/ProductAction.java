@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -37,19 +38,18 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	private int nextPage;
 	private int pageSize = 10;
 
-//	HttpServletRequest
 	
 	public String searchNumList(){
 		try{
 			
-//			String path = request.getSession().getServletContext().getRealPath("/");
+			String path = ServletActionContext.getRequest().getRealPath("/");
 			
-//			System.out.println("path:"+path);
+			System.out.println("path:"+path);
 			
 			list =  productService.searchNumList(6);
 			
 			for(int i=0;i<6;i++){
-//				getPos()[i]=list.get(i).getFirPicPosition();
+				getPos()[i]=list.get(i).getFirPicPosition();
 				getPrice()[i]=list.get(i).getPrivce();
 				getN()[i]=list.get(i).getName();
 			}
