@@ -22,6 +22,10 @@
 		    <result name="admin">/1Admin/home.jsp</result>
 		    <result name="customer">/2Customer/home.jsp</result>
 		</action>
+		
+		<action name="productAction_*" method="{1}" class="shop.action.ProductAction">
+		    <result name="list">index.jsp</result>
+		</action>
         
     </package>
     

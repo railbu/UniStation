@@ -19,6 +19,7 @@ public class Product {
 	private String description;
 	private float privce;
 	private	int favorite_num;
+	private String firPicPosition;
 	
 	
 	@Id
@@ -58,5 +59,11 @@ public class Product {
 	}
 	public void setProduct_id(String product_id) {
 		this.product_id = product_id;
+	}
+	public String getFirPicPosition() {
+		return firPicPosition;
+	}
+	public void setFirPicPosition(String firPicPosition) {
+		this.firPicPosition = firPicPosition;
 	}
 }

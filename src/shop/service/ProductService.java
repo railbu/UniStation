@@ -20,6 +20,10 @@ public class ProductService {
 		return productDao.findAllByType(type);
 	}
 	
+	public List<Product> searchNumList(int num){
+		return productDao.searchNumList(num);
+	}
+	
 	public Product loadproduct(Long id){
 		return productDao.loadProduct(id);
 	}

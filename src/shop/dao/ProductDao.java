@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Component;
-
 import shop.dao.support.HibernateUtil;
 import shop.model.Product;
 
@@ -48,6 +47,14 @@ public class ProductDao extends HibernateDaoSupport{
 		}
 		
 		return product;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> searchNumList(int num){
+		Session session = super.getSession();
+		return session.createCriteria(Product.class)
+			.setMaxResults(num)
+			.list();
 	}
 	
 	public Product loadProduct(Long id){
