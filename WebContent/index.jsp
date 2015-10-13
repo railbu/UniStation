@@ -9,6 +9,7 @@
 <link href="${ctx}/resources/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href="${ctx}/resources/index/googlestyle.css" rel='stylesheet' type='text/css'>
@@ -54,7 +55,7 @@
 			</select>
    		</div>
    		<ul class="header_user_info">
-		  <a class="login" href="login.html">
+		  <a class="login" href="loginAction_login.action">
 			<i class="user"></i> 
 			<li class="user_desc">My Account</li>
 		  </a>
@@ -85,7 +86,7 @@
   <div class="header_bottom">
 	<div class="container">	 			
 		<div class="logo">
-		  <a href="${ctx}/productAction_searchNumList.action"><img src="${ctx}/resources/images/logo.png" width="200px"  alt=""/></a>
+		  <a href="${ctx}/productAction_index.action"><img src="${ctx}/resources/images/logo.png" width="200px"  alt=""/></a>
 		</div>	
 		<div class="header_bottom_right" style="margin-top:55px; ">			
 	        <div class="h_menu4"><!-- start h_menu4 -->
@@ -188,7 +189,12 @@
 						                        <div class="info"> </div>
 								              </div>
 								              <div class="tab_desc">
-												  <h3><a href="#"><s:property value="n[0]"/></a></h3>
+												  <h3>
+												  		<s:url value="/productAction_productInfo" id="productInfo">
+															<s:param name="pid" value="productid[0]" />
+														</s:url> 
+												  		<s:a href="%{productInfo}" cssClass="button button-flat-primary button-tiny" style="height:32px"><s:property value="n[0]"/></s:a>
+												  </h3>
 												  <p>$<s:property value="price[0]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
@@ -228,7 +234,11 @@
 						                        <div class="info"> </div>
 								              </div>
 								              <div class="tab_desc">
-												  <h3><a href="#"><s:property value="n[3]"/></a></h3>
+												  <h3>
+												  		<s:url value="/productAction_productInfo" id="productInfo">
+															<s:param name="pid" value="productid[3]" />
+														</s:url> 
+												  		<s:a href="%{productInfo}" cssClass="button button-flat-primary button-tiny" style="height:32px"><s:property value="n[3]"/></s:a></h3>
 												  <p>$<s:property value="price[3]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>

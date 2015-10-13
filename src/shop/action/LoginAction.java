@@ -20,6 +20,8 @@ public class LoginAction extends ActionSupport implements Preparable{
 	private String password;
 	@Autowired private UserService userService;
 	
+	
+	//登陆
 	public String login(){
 		System.out.println(username + ":"+password );
 		try{

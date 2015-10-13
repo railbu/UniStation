@@ -16,6 +16,10 @@ public class ProductService {
 		return productDao.findProductByName(name);
 	}
 	
+	public Product findproductById(Long id){
+		return productDao.findProductById(id);
+	}
+	
 	public List<Product> findAllByType(int type){
 		return productDao.findAllByType(type);
 	}

@@ -20,10 +20,10 @@ public class ProductDao extends HibernateDaoSupport{
 		return Product;
 	}
 	
-	public Product findProductById(String product_id){
+	public Product findProductById(Long id){
 		Session session = super.getSession();
 		Product Product = (Product) session.createCriteria(Product.class)
-				.add(Restrictions.eq("product_id", product_id)).uniqueResult();
+				.add(Restrictions.eq("id", id)).uniqueResult();
 
 		return Product;
 	}
@@ -60,4 +60,5 @@ public class ProductDao extends HibernateDaoSupport{
 	public Product loadProduct(Long id){
 		return (Product) super.getSession().load(Product.class, id);
 	}
+
 }

@@ -3,8 +3,6 @@ package shop.action;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,7 +21,8 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	@Autowired private ProductService productService;
 
 	private Product product;
-	
+	private Long pid;
+	private Long[] productid = new Long[6];
 	private List<Product> list;
 	
 	private String[] pos = new String[6];
@@ -38,22 +37,25 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	private int nextPage;
 	private int pageSize = 10;
 
-	
-	public String searchNumList(){
+	//加载主界面
+	public String index(){
 		try{
 			
-			String path = ServletActionContext.getRequest().getRealPath("/");
-			
-			System.out.println("path:"+path);
+//			@SuppressWarnings("deprecation")
+//			String path = ServletActionContext.getRequest().getRealPath("/");
+//			
+//			System.out.println("path:"+path);
 			
 			list =  productService.searchNumList(6);
 			
 			for(int i=0;i<6;i++){
+				getProductid()[i]=list.get(i).getId();
 				getPos()[i]=list.get(i).getFirPicPosition();
 				getPrice()[i]=list.get(i).getPrivce();
 				getN()[i]=list.get(i).getName();
 			}
 			
+			System.out.println("id+"+productid[0]);
 		
 			return "list";
 		
@@ -62,7 +64,28 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 			e.printStackTrace();
 		}
 	
-	return "list";
+		return "list";
+	}
+	
+	//获取某商品详情
+	public String productInfo(){
+		try{
+			this.product = productService.findproductById(pid);
+			System.out.println("id:"+product.getFirPicPosition());
+			for(int i=1;i<=4;i++){
+				getPos()[i]=product.getFirPicPosition()+"s"+i+".jpg";
+			}
+		
+			price[0] = this.product.getPrivce();
+			
+			return "moreinfo";
+		
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	
+		return "moreinfo";
 	}
 	
 //	public String list() {
@@ -248,6 +271,22 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 
 	public void setN(String[] n) {
 		this.n = n;
+	}
+
+	public Long[] getProductid() {
+		return productid;
+	}
+
+	public void setProductid(Long[] productid) {
+		this.productid = productid;
+	}
+
+	public Long getPid() {
+		return pid;
+	}
+
+	public void setPid(Long pid) {
+		this.pid = pid;
 	}
 
 	

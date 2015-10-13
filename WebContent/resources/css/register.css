@@ -1,0 +1,31 @@
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"],
+.register-bottom-grid input[type="password"],.register-top-grid input[type="email"],
+.register-top-grid input[type="date"],.register-top-grid input[type="file"] {
+	border: 1px solid #EEE;
+	outline-color:#FF5B36;
+	width: 96%;
+	font-size: 1em;
+	padding: 0.5em;
+}
+.register-top-grid input[type="date"]{
+	height: 40px;
+}
+
+#img0{
+	width: 200px;
+	position: relative;
+	left: 550px;
+	top: -150px;
+	border: none;
+}
+.sex-select1{
+	padding: 1em 0;
+	margin: 2em 0;
+}
+.sex-select2{
+	border: 1px solid #EEE;
+	outline-color:#FF5B36;
+	width: 96%;
+	font-size: 1em;
+	padding: 0.5em;
+}
