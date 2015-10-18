@@ -1,14 +1,12 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<%
-    String path=request.getContextPath();
-%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="zh-CN" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=4">   <!-- IE5 mode -->
 	<meta http-equiv="X-UA-Compatible" content="IE=7.5"> <!-- IE7 mode -->
 	<meta http-equiv="X-UA-Compatible" content="IE=100"> <!-- IE8 mode -->
-	<meta http-equiv="X-UA-Compatible" content="IE=a">   <!-- IE5 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=a">   <!-- IE5 mode --> 
     <title> UniStation </title>
     <%@include file="../common/header.jsp" %>
 <link href="${ctx}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -141,79 +139,65 @@
     <div class="contact">
       	<div class="container">
       	   <div class="register">
-		  	  <s:form action="LoginAction" theme="simple"> 
-		  	  	<div class="register-top-grid">
-					<h3>头像信息</h3>
-						<div style="margin-top:140px;clear:both">
-			            	<img src="image" id="img0" >
-			        	</div>
-
-					<div class="clearfix"> </div>
-						<a class="news-letter" href="#"></a>
-				</div>
-				    
+		  	  <form> 
 				 <div class="register-top-grid">
 					<h3>个人信息</h3>
 					 <div>
 						<span>姓名<label>*</label></span>
-						<table>
-							<tr>
-							<td width="300px"><s:property value="#user.getUsername()"/></td>
-							</tr>
-						</table>
+						<input type="text" placeholder="用户名"> 
+					 </div>
+					 <div>
+						<span>性别<label>*</label></span>
+						<select name="sex" id="" class="sex-select2">
+							<option value="man">男</option>
+							<option value="woman">女</option>
+						</select>
 					 </div>
 					 <div>
 						 <span>邮件<label>*</label></span>
-						 <table>
-							<tr>
-							<td width="300px"><s:property value="#user.getEmail()"/></td>
-							</tr>
-						</table>
+						 <input type="email" placeholder="邮件"> 
 					 </div>
 					 <div>
 						 <span>生日<label>*</label></span>
-						 <table>
-							<tr>
-							<td width="300px"><s:property value="#user.getBirthday()"/></td>
-							</tr>
-						</table> 
-					 </div>
-					 <div>
-						 <span>性别<label>*</label></span>
-						 <table>
-							<tr>
-							<td width="300px"><s:property value="#user.getGender()"/></td>
-							</tr>
-						</table>
-					 </div>
-					 <div>
-						 <span>昵称<label>*</label></span>
-						 <table>
-							<tr>
-							<td width="300px"><s:property value="#user.getNickname()"/></td>
-							</tr>
-						</table> 
-					 </div>
-					 <div>
-						 <span>电话<label>*</label></span>
-						 <table>
-							<tr>
-							<td width="300px"><s:property value="#user.getMobile()"/></td>
-							</tr>
-						</table> 
+						 <input type="date" placeholder="生日"> 
 					 </div>
 					 
+
+					 <div style="margin-top:80px;clear:both">
+					 	<span>头像<label>*</label></span>
+			            <input type="file" name="file0" id="file0" multiple="multiple" /><br><img src="" id="img0" >
+			        </div>
 
 					 <div class="clearfix"> </div>
 					   <a class="news-letter" href="#">
 					   </a>
 					 </div>
-
-				</s:form>
+				     <div class="register-bottom-grid" style="margin-top:0px">
+						    <h3>登录信息</h3>
+							 <div>
+								<span>登录密码<label>*</label></span>
+								<input type="password" placeholder="请输入登录密码">
+							 </div>
+							 <div>
+								<span>确认登录密码<label>*</label></span>
+								<input type="password" placeholder="请确认登录密码">
+							 </div>
+							 <div><h3>支付信息</h3></div>
+							 <div style="clear:both">
+								<span>支付密码<label>*</label></span>
+								<input type="password" placeholder="请输入支付密码">
+							 </div>
+							 <div>
+								<span>确认支付密码<label>*</label></span>
+								<input type="password" placeholder="请确认支付密码">
+							 </div>
+							 <div class="clearfix"> </div>
+					 </div>
+				</form>
 				<div class="clearfix"> </div>
 				<div class="register-but">
 				   <form>
-					   <input type="button" value="修改信息" onclick="window.location.href='userModify.jsp'" >
+					   <input type="submit" value="确认修改">
 					   <div class="clearfix"> </div>
 				   </form>
 				</div>
@@ -324,4 +308,4 @@ function getObjectURL(file) {
 }
 </script>
 </body>
-</html>	
+</html>		

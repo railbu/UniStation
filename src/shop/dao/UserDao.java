@@ -45,4 +45,19 @@ public class UserDao extends HibernateDaoSupport{
 	public User loadUser(Long userId){
 		return (User) super.getSession().load(User.class, userId);
 	}
+	
+	//修改用户信息
+	public User modifyUser(User user){
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		try{
+			session.beginTransaction();session.update(user);
+			session.update(user);
+			session.getTransaction().commit();	
+		}catch(Exception e){
+			session.getTransaction().rollback();
+		}
+		
+		
+		return user;
+	}
 }

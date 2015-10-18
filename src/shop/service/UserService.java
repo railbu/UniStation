@@ -23,4 +23,8 @@ public class UserService {
 	public User loadUser(Long userId){
 		return userDao.loadUser(userId);
 	}
+	//修改用户信息
+	public User modifyUser(User user){
+		return userDao.modifyUser(user);
+	}
 }
