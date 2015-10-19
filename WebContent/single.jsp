@@ -189,21 +189,21 @@
 						<ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="${ctx}/<s:property value="pos[1]"/>" class="img-responsive" />
-									<img class="etalage_source_image" src="${ctx}/<s:property value="pos[1]"/>" class="img-responsive" title="" />
+									<img class="etalage_thumb_image" src="${ctx}/<s:property value="dispos[1]"/>" class="img-responsive" />
+									<img class="etalage_source_image" src="${ctx}/<s:property value="dispos[1]"/>" class="img-responsive" title="" />
 								</a>
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="${ctx}/<s:property value="pos[2]"/>" class="img-responsive" />
-								<img class="etalage_source_image" src="${ctx}/<s:property value="pos[2]"/>" class="img-responsive" title="" />
+								<img class="etalage_thumb_image" src="${ctx}/<s:property value="dispos[2]"/>" class="img-responsive" />
+								<img class="etalage_source_image" src="${ctx}/<s:property value="dispos[2]"/>" class="img-responsive" title="" />
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="${ctx}/<s:property value="pos[3]"/>" class="img-responsive"  />
-								<img class="etalage_source_image" src="${ctx}/<s:property value="pos[3]"/>"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="${ctx}/<s:property value="dispos[3]"/>" class="img-responsive"  />
+								<img class="etalage_source_image" src="${ctx}/<s:property value="dispos[3]"/>"class="img-responsive"  />
 							</li>
 						    <li>
-								<img class="etalage_thumb_image" src="${ctx}/<s:property value="pos[4]"/>" class="img-responsive"  />
-								<img class="etalage_source_image" src="${ctx}/<s:property value="pos[4]"/>"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="${ctx}/<s:property value="dispos[4]"/>" class="img-responsive"  />
+								<img class="etalage_source_image" src="${ctx}/<s:property value="dispos[4]"/>"class="img-responsive"  />
 							</li>
 						</ul>
 						 <div class="clearfix"></div>		
@@ -214,7 +214,7 @@
                     </ul>
 					<h1>Sofi Blouse</h1>
 					<ul class="price_single">
-					  <li class="head"><h2>$<s:property value="price[0]"/></h2></li>
+					  <li class="head"><h2>$<s:property value="prices[0]"/></h2></li>
 					  <li class="head_desc"><a href="#">12 reviews</a><img src="${ctx}/resources/images/review.png" alt=""/></li>
 					  <div class="clearfix"></div>
 					</ul>

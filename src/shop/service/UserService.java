@@ -16,6 +16,14 @@ public class UserService {
 		return userDao.findUser(username);
 	}
 	
+	public List<User> findAll(){
+		return userDao.findAll();
+	}
+	
+	public void delete(Long id){
+		userDao.delete(id);
+	}
+	
 	public List<User> findAllByType(int type){
 		return userDao.findAllByType(type);
 	}

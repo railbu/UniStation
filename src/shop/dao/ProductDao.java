@@ -3,6 +3,7 @@ package shop.dao;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Component;
@@ -20,12 +21,23 @@ public class ProductDao extends HibernateDaoSupport{
 		return Product;
 	}
 	
+	public void delete(Long id){
+		super.getSession().delete(super.getSession().load(Product.class, id));
+	}
+	
 	public Product findProductById(Long id){
 		Session session = super.getSession();
 		Product Product = (Product) session.createCriteria(Product.class)
 				.add(Restrictions.eq("id", id)).uniqueResult();
 
 		return Product;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> findAll(){
+		return super.getSession()
+				.createCriteria(Product.class)
+				.addOrder(Order.asc("time")).list();
 	}
 	
 	@SuppressWarnings("unchecked")

@@ -19,7 +19,7 @@
 
 		<action name="loginAction_*" method="{1}" class="shop.action.LoginAction">
 		    <result name="input">login.jsp</result>
-		    <result name="admin">/1Admin/home.jsp</result>
+		    <result name="admin" type="redirect">/1Admin/admin_list.action</result>
 		    <result name="customer">/2Customer/home.jsp</result>
 		</action>
 		
@@ -27,8 +27,23 @@
 		    <result name="list">index.jsp</result>
 		    <result name="moreinfo">single.jsp</result>
 		</action>
+		
+		<action name="search_*" method="{1}" class="shop.action.SearchAction">
+            <result name="success">search.jsp</result>
+            <result name="result">searchResult.jsp</result>
+       </action>
         
     </package>
+    
+    <package name="admin" namespace="/1Admin" extends="struts-default">
+		<default-interceptor-ref name="paramsPrepareParamsStack"/>
+		
+		<action name="admin_*" class="shop.action.admin.AdminAction" method="{1}">
+            <result name="list">/1Admin/admin_user.jsp</result>
+            <result name="plist">/1Admin/admin_product.jsp</result>
+        </action>
+        
+	</package>
     
  	
     <!-- Add packages here -->

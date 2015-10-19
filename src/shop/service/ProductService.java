@@ -20,8 +20,16 @@ public class ProductService {
 		return productDao.findProductById(id);
 	}
 	
+	public void delete(Long id){
+		productDao.delete(id);
+	}
+	
 	public List<Product> findAllByType(int type){
 		return productDao.findAllByType(type);
+	}
+	
+	public List<Product> findAll(){
+		return productDao.findAll();
 	}
 	
 	public List<Product> searchNumList(int num){

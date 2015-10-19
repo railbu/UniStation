@@ -23,12 +23,11 @@ public class LoginAction extends ActionSupport implements Preparable{
 	
 	//登陆
 	public String login(){
-		System.out.println(username + ":"+password );
 		try{
 			User user = userService.findUser(username);
-			System.out.println("user:"+user.getPower());
+			System.out.println("user:"+user.getPassword()+"..."+user.getUsername());
 			//if(MD5Util.MD5(password).equals(user.getPassw	ord())){
-			if(password.equals(user.getPassword())){	
+			if(password.equals(user.getPassword())){
 				ActionContext.getContext().getSession().put("currentUser",username);
 				ActionContext.getContext().getSession().put("power",""+user.getPower());
 				

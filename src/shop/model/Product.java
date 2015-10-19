@@ -17,9 +17,11 @@ public class Product {
 	private String product_id;
 	private String name;
 	private String description;
-	private float privce;
+	private float price;
 	private	int favorite_num;
+	private String time;
 	private String firPicPosition;
+	private String keyword;
 	
 	
 	@Id
@@ -42,12 +44,7 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public float getPrivce() {
-		return privce;
-	}
-	public void setPrivce(float privce) {
-		this.privce = privce;
-	}
+
 	public int getFavorite_num() {
 		return favorite_num;
 	}
@@ -65,5 +62,23 @@ public class Product {
 	}
 	public void setFirPicPosition(String firPicPosition) {
 		this.firPicPosition = firPicPosition;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
 	}
 }

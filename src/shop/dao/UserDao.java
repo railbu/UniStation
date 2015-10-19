@@ -3,6 +3,7 @@ package shop.dao;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Component;
@@ -12,7 +13,14 @@ import shop.model.User;
 
 @Component
 public class UserDao extends HibernateDaoSupport{
-
+	
+	@SuppressWarnings("unchecked")
+	public List<User> findAll(){
+		return super.getSession()
+				.createCriteria(User.class)
+				.addOrder(Order.asc("id")).list();
+	}
+	
 	public User findUser(String username){
 		Session session = super.getSession();
 		User user = (User) session.createCriteria(User.class)
@@ -27,6 +35,10 @@ public class UserDao extends HibernateDaoSupport{
 		List<User> users;
 		users = session.createCriteria(User.class).add(Restrictions.eq("power",type)).list();
 		return users;
+	}
+	
+	public void delete(Long id){
+		super.getSession().delete(super.getSession().load(User.class, id));
 	}
 	
 	public User save(User user){

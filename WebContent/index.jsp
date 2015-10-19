@@ -148,10 +148,12 @@
 <div class="column_center">
   <div class="container">
 	<div class="search">
-	  <div class="stay">Stay updated</div>
+	  <div class="stay">搜索商品</div>
 	  <div class="stay_right">
-		  <input type="text" value="Search Product" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Product';}">
-		  <input type="submit" value="">
+	  	  <form role="form" action="${ctx}/search_search" method="post">
+		  	<input type="text" name="input" value="Search Product" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Product';}">
+		  	<input type="submit" value="">
+		  </form>
 	  </div>
 	  <div class="clearfix"> </div>
 	</div>
@@ -195,7 +197,7 @@
 														</s:url> 
 												  		<s:a href="%{productInfo}" cssClass="button button-flat-primary button-tiny" style="height:32px"><s:property value="n[0]"/></s:a>
 												  </h3>
-												  <p>$<s:property value="price[0]"/></p>
+												  <p>$<s:property value="prices[0]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>
@@ -208,7 +210,7 @@
 								              </div>
 								              <div class="tab_desc">
 												  <h3><a href="#"><s:property value="n[1]"/></a></h3>
-												  <p>$<s:property value="price[1]"/></p>
+												  <p>$<s:property value="prices[1]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>
@@ -221,7 +223,7 @@
 								              </div>
 								              <div class="tab_desc">
 												  <h3><a href="#"><s:property value="n[2]"/></a></h3>
-												  <p>$<s:property value="price[2]"/></p>
+												  <p>$<s:property value="prices[2]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>
@@ -229,7 +231,7 @@
 										</li>
 									    <li>
 									     <div class="view view-first">
-					   		  			   <img src="${ctx}/resources/images/pic4.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${ctx}/<s:property value="pos[3]"/>" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info"> </div>
 								              </div>
@@ -239,7 +241,7 @@
 															<s:param name="pid" value="productid[3]" />
 														</s:url> 
 												  		<s:a href="%{productInfo}" cssClass="button button-flat-primary button-tiny" style="height:32px"><s:property value="n[3]"/></s:a></h3>
-												  <p>$<s:property value="price[3]"/></p>
+												  <p>$<s:property value="prices[3]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>
@@ -252,7 +254,7 @@
 								              </div>
 								              <div class="tab_desc">
 												  <h3><a href="#"><s:property value="n[4]"/></a></h3>
-												  <p>$<s:property value="price[4]"/></p>
+												  <p>$<s:property value="prices[4]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>
@@ -266,7 +268,7 @@
 								              </div>
 								              <div class="tab_desc">
 												  <h3><a href="#"><s:property value="n[5]"/></a></h3>
-												  <p>$<s:property value="price[5]"/></p>
+												  <p>$<s:property value="prices[5]"/></p>
 												  <a href="#" class="btn1 btn-primary1"><span>Add To Cart</span><img src="${ctx}/resources/images/plus.png" alt=""/></a>
 											  </div>
 										  </div>

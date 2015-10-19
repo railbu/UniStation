@@ -26,7 +26,8 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	private List<Product> list;
 	
 	private String[] pos = new String[6];
-	private float[] price = new float[6];
+	private String[] dispos = new String[6];
+	private float[] prices = new float[6];
 	private String[] n = new String[6];
 	
 	//分页
@@ -41,17 +42,17 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	public String index(){
 		try{
 			
-//			@SuppressWarnings("deprecation")
-//			String path = ServletActionContext.getRequest().getRealPath("/");
-//			
-//			System.out.println("path:"+path);
+			@SuppressWarnings("deprecation")
+			String path = ServletActionContext.getRequest().getRealPath("/");
+			
+			System.out.println("path:"+path);
 			
 			list =  productService.searchNumList(6);
 			
 			for(int i=0;i<6;i++){
 				getProductid()[i]=list.get(i).getId();
-				getPos()[i]=list.get(i).getFirPicPosition();
-				getPrice()[i]=list.get(i).getPrivce();
+				getPos()[i]=list.get(i).getFirPicPosition()+"pic1.jpg";
+				getPrices()[i]=list.get(i).getPrice();
 				getN()[i]=list.get(i).getName();
 			}
 			
@@ -73,10 +74,10 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 			this.product = productService.findproductById(pid);
 			System.out.println("id:"+product.getFirPicPosition());
 			for(int i=1;i<=4;i++){
-				getPos()[i]=product.getFirPicPosition()+"s"+i+".jpg";
+				getDispos()[i]=product.getFirPicPosition()+"pic"+i+".jpg";
 			}
 		
-			price[0] = this.product.getPrivce();
+			prices[0] = this.product.getPrice();
 			
 			return "moreinfo";
 		
@@ -251,14 +252,6 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 	}
 
 
-	public float[] getPrice() {
-		return price;
-	}
-
-
-	public void setPrice(float[] price) {
-		this.price = price;
-	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
@@ -287,6 +280,22 @@ public class ProductAction extends ActionSupport implements Preparable,ModelDriv
 
 	public void setPid(Long pid) {
 		this.pid = pid;
+	}
+
+	public float[] getPrices() {
+		return prices;
+	}
+
+	public void setPrices(float[] prices) {
+		this.prices = prices;
+	}
+
+	public String[] getDispos() {
+		return dispos;
+	}
+
+	public void setDispos(String[] dispos) {
+		this.dispos = dispos;
 	}
 
 	
