@@ -57,4 +57,8 @@ public class UserDao extends HibernateDaoSupport{
 	public User loadUser(Long userId){
 		return (User) super.getSession().load(User.class, userId);
 	}
-}
+
+	 public void add(User userinfo) {
+	        this.getHibernateTemplate().save(userinfo);
+	    }
+	    }

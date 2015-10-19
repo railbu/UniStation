@@ -31,4 +31,9 @@ public class UserService {
 	public User loadUser(Long userId){
 		return userDao.loadUser(userId);
 	}
+	
+	public void add(User userinfo) {
+	        userDao.add(userinfo);
+	    }
+
 }

@@ -139,12 +139,12 @@
     <div class="contact">
       	<div class="container">
       	   <div class="register">
-		  	  <form> 
+		  	   <s:form action="user_add" >
 				 <div class="register-top-grid">
 					<h3>个人信息</h3>
 					 <div>
 						<span>姓名<label>*</label></span>
-						<input type="text" placeholder="用户名"> 
+						 <s:textfield name="username" />
 					 </div>
 					 <div>
 						<span>性别<label>*</label></span>
@@ -176,30 +176,25 @@
 						    <h3>登录信息</h3>
 							 <div>
 								<span>登录密码<label>*</label></span>
-								<input type="password" placeholder="请输入登录密码">
-							 </div>
-							 <div>
-								<span>确认登录密码<label>*</label></span>
-								<input type="password" placeholder="请确认登录密码">
+								<s:password name="password" />
 							 </div>
 							 <div><h3>支付信息</h3></div>
 							 <div style="clear:both">
 								<span>支付密码<label>*</label></span>
-								<input type="password" placeholder="请输入支付密码">
+								<input type="paypassword" placeholder="请输入支付密码">
 							 </div>
 							 <div>
 								<span>确认支付密码<label>*</label></span>
-								<input type="password" placeholder="请确认支付密码">
+								<input type="paypassword" placeholder="请确认支付密码">
 							 </div>
 							 <div class="clearfix"> </div>
 					 </div>
-				</form>
+			
 				<div class="clearfix"> </div>
 				<div class="register-but">
-				   <form>
-					   <input type="submit" value="提交">
+					  <s:submit value="注册"/>
 					   <div class="clearfix"> </div>
-				   </form>
+				     </s:form>
 				</div>
 		   </div>
       	 </div>
