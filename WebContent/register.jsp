@@ -139,12 +139,12 @@
     <div class="contact">
       	<div class="container">
       	   <div class="register">
-		  	   <s:form action="user_add" >
+		  	   <form  role="form"  action="${ctx}/user_add" method="post" >
 				 <div class="register-top-grid">
 					<h3>个人信息</h3>
 					 <div>
-						<span>姓名<label>*</label></span>
-						 <s:textfield name="username" />
+						<span>用户名<label>*</label></span>
+						 <input type="text" name="username" />
 					 </div>
 					 <div>
 						<span>性别<label>*</label></span>
@@ -155,17 +155,22 @@
 					 </div>
 					 <div>
 						 <span>邮件<label>*</label></span>
-						 <input type="email" placeholder="邮件"> 
+						 <input type="text" name="mail" /> 
 					 </div>
 					 <div>
 						 <span>生日<label>*</label></span>
 						 <input type="date" placeholder="生日"> 
 					 </div>
 					 
+					 <div>
+						 <span>昵称<label>*</label></span>
+						 <input type="text" name="name" /> 
+					 </div>
+					
 
 					 <div style="margin-top:80px;clear:both">
 					 	<span>头像<label>*</label></span>
-			            <input type="file" name="file0" id="file0" multiple="multiple" /><br><img src="" id="img0" >
+			            <input type="file" name="file" id="file0" multiple="multiple" /><br><img src="" id="img0" >
 			        </div>
 
 					 <div class="clearfix"> </div>
@@ -176,25 +181,29 @@
 						    <h3>登录信息</h3>
 							 <div>
 								<span>登录密码<label>*</label></span>
-								<s:password name="password" />
+								<input type="password" name="password" />
 							 </div>
-							 <div><h3>支付信息</h3></div>
+							 <div>
+								<span>确认登录密码<label>*</label></span>
+								<input type="password" placeholder="请确认登录密码">
+							 </div>
+							 <!-- <div><h3>支付信息</h3></div>
 							 <div style="clear:both">
 								<span>支付密码<label>*</label></span>
-								<input type="paypassword" placeholder="请输入支付密码">
+								<input type="password" placeholder="请输入支付密码">
 							 </div>
 							 <div>
 								<span>确认支付密码<label>*</label></span>
-								<input type="paypassword" placeholder="请确认支付密码">
+								<input type="password" placeholder="请确认支付密码">
 							 </div>
-							 <div class="clearfix"> </div>
+							 <div class="clearfix"> </div> -->
 					 </div>
 			
 				<div class="clearfix"> </div>
 				<div class="register-but">
-					  <s:submit value="注册"/>
+					  <input type="submit" value="注册"/>
 					   <div class="clearfix"> </div>
-				     </s:form>
+				     </form>
 				</div>
 		   </div>
       	 </div>

@@ -32,7 +32,7 @@ public class SearchAction extends ActionSupport implements Preparable{
 			}else if(input.toString().toLowerCase().contains("o")){
 				return "result";
 			}else{
-				return SUCCESS;
+				return "nothing";
 			}
 			
 		}catch(Exception e){

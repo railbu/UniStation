@@ -35,7 +35,7 @@
                 <li class="divider-vertical hidden-xs"></li>
                 
                 <li>
-                    <a class="mr_15" href="">登录</a>
+                    <a class="mr_15" href="${ctx}/user_input.action ">注册</a>
                 </li>
                 
             </ul>

@@ -31,11 +31,13 @@
 		<action name="search_*" method="{1}" class="shop.action.SearchAction">
             <result name="success">search.jsp</result>
             <result name="result">searchResult.jsp</result>
+            <result name="nothing">result.jsp</result>
        </action>
        
 		<action name="user_*" class="shop.action.RegisterAction" method="{1}">
   			<result>login.jsp</result> 
   			<result name="input">register.jsp</result> 
+  			
   		</action>
 		
         
