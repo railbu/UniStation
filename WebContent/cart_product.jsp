@@ -1,34 +1,35 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>UniStaion | Cart</title>
-<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=4">   <!-- IE5 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=7.5"> <!-- IE7 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=100"> <!-- IE8 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=a">   <!-- IE5 mode --> 
+    <title> UniStation </title>
+    <%@include file="common/header.jsp" %>
+<link href="${ctx}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!--cart.css is added by ty at 20151014-->
-<link href="./css/cart.css" rel='stylesheet' type='text/css' />
+<link href="${ctx}/resources/css/cart.css" rel='stylesheet' type='text/css' />
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<link href="${ctx}/resources/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 
-<link rel="stylesheet" href="http://s.lizi.com/www/css/global.css?201510">
-<link rel="stylesheet" href="http://s.lizi.com/www/css/order/common.css?20150915">
-<link rel="stylesheet" href="http://s.lizi.com/www/css/order/cart.css?20150915">
+<link rel="stylesheet" href="${ctx}/resources/css/global.css">
+<link rel="stylesheet" href="${ctx}/resources/css/common.css">
+<link rel="stylesheet" href="${ctx}/resources/css/cart.css">
 
 
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-<script src="./js/jquery.easydropdown.js"></script>
-<script src="./js/responsiveslides.min.js"></script>
+<link href="${ctx}/resources/css/googlestyle.css" rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="${ctx}/resources/js/jquery-1.11.1.min.js"></script>
+<script src="${ctx}/resources/js/jquery.easydropdown.js"></script>
+<script src="${ctx}/resources/js/responsiveslides.min.js"></script>
 <script>
     $(function () {
       $("#").responsiveSlides({
@@ -40,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       });
     });
 </script>
-<script src="./js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script src="${ctx}/resources/js/easyResponsiveTabs.js" type="text/javascript"></script>
 		    <script type="text/javascript">
 			    $(document).ready(function () {
 			        $('#horizontalTab').easyResponsiveTabs({
@@ -63,16 +64,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="header_bottom">
 	<div class="container">	 			
 		<div class="logo">
-		  <a href="index.html"><img src="./images/logo.png" alt=""/></a>
+		  <a href="${ctx}/productAction_index.action"><img src="${ctx}/resources/images/logo.png" width="200px"  alt=""/></a>
 		</div>	
-		<div class="header_bottom_right">			
+		<div class="header_bottom_right" style="margin-top:55px; ">			
 	        <div class="h_menu4"><!-- start h_menu4 -->
+				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="#">User Information</a></li>
-          <li><a href="#">Products Information</a></li>
+					<li class="active"><a href="index.html">New</a></li>
+					<li><a href="products.html">Designers</a></li>
+					<li><a href="products.html">Women</a>
+						<ul>
+							<li><a href="products.html">Accessories</a></li>
+							<li><a href="products.html">Ethnic Apparel</a></li>
+							<li><a href="products.html">Footwear</a></li>
+							<li><a href="products.html">Grooming</a></li>
+							<li><a href="products.html">Handbags</a></li>
+							<li><a href="products.html">Jewellery</a></li>
+						</ul>
+					</li>
+					<li><a href="products.html">Men</a>
+						<ul>
+							<li><a href="products.html">Accessories</a></li>
+							<li><a href="products.html">Footwear</a></li>
+							<li><a href="products.html">Apparel</a></li>
+						</ul>
+					</li>
+					<li><a href="products.html">Clearence</a></li>
 				</ul>
-				<script type="text/javascript" src="./js/nav.js"></script>
+				<script type="text/javascript" src="${ctx}/resources/js/nav.js"></script>
 	      </div><!-- end h_menu4 -->
+		  <div class="shopping_cart">
+		 	<ul class="shopping_cart_top">
+			    <a href="#">
+				   <li class="shop_left">Your cart</li>
+				   <li class="shop_right"><img src="${ctx}/resources/images/arrow1.png" alt=""/></li>
+				    <div class="clearfix"></div>	
+				</a>
+			</ul>
+			<ul class="shopping_bag">
+			    <a href="#">
+				   <li class="bag_left"><img src="${ctx}/resources/images/bag.png" alt=""/></li>
+				   <li class="bag_right"> 0 Items | $ 0</li>
+				    <div class="clearfix"></div>	
+				</a>
+			</ul>		
+		  </div>
 	      <div class="clearfix"></div>		   
       </div>
     </div>

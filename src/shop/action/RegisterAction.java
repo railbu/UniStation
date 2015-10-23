@@ -51,7 +51,7 @@ public class RegisterAction extends ActionSupport implements Preparable,ModelDri
 	        return user;
 	    }
 
-	    public String add() {
+	    public String add(){
 	    	
 	    	@SuppressWarnings("deprecation")
 			String path = ServletActionContext.getRequest().getRealPath("/");

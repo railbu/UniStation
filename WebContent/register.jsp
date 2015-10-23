@@ -139,7 +139,7 @@
     <div class="contact">
       	<div class="container">
       	   <div class="register">
-		  	   <form  role="form"  action="${ctx}/user_add" method="post" >
+		  	   <form  action="${ctx}/user_add.action" method="post" >
 				 <div class="register-top-grid">
 					<h3>个人信息</h3>
 					 <div>
@@ -199,12 +199,8 @@
 							 <div class="clearfix"> </div> -->
 					 </div>
 			
-				<div class="clearfix"> </div>
-				<div class="register-but">
-					  <input type="submit" value="注册"/>
-					   <div class="clearfix"> </div>
-				     </form>
-				</div>
+					  <s:submit value="注册"/>
+			</form>
 		   </div>
       	 </div>
       </div>

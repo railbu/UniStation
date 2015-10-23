@@ -42,7 +42,7 @@ public class SearchDAO extends HibernateDaoSupport {
 			wlist = DivideWord.divide(input);
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("庖丁没接好");
+			System.out.println("庖丁没接好"); 
 		}
 
 		for (int i = 0; i < wlist.size(); i++) {

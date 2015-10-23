@@ -1,34 +1,36 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>UniStaion | Cart</title>
-<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=4">   <!-- IE5 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=7.5"> <!-- IE7 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=100"> <!-- IE8 mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=a">   <!-- IE5 mode --> 
+    <title> UniStation </title>
+    <%@include file="common/header.jsp" %>
+<link href="${ctx}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!--cart.css is added by ty at 20151014-->
-<link href="./css/cart.css" rel='stylesheet' type='text/css' />
+<link href="${ctx}/resources/css/cart.css" rel='stylesheet' type='text/css' />
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<link href="${ctx}/resources/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 
-<link rel="stylesheet" href="http://s.lizi.com/www/css/global.css?201510">
-<link rel="stylesheet" href="http://s.lizi.com/www/css/order/common.css?20150915">
-<link rel="stylesheet" href="http://s.lizi.com/www/css/order/cart.css?20150915">
+
+<link rel="stylesheet" href="${ctx}/resources/css/global.css">
+<link rel="stylesheet" href="${ctx}/resources/css/common.css">
+<link rel="stylesheet" href="${ctx}/resources/css/cart.css">
 
 
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-<script src="./js/jquery.easydropdown.js"></script>
-<script src="./js/responsiveslides.min.js"></script>
+<link href="${ctx}/resources/css/googlestyle.css" rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="${ctx}/resources/js/jquery-1.11.1.min.js"></script>
+<script src="${ctx}/resources/js/jquery.easydropdown.js"></script>
+<script src="${ctx}/resources/js/responsiveslides.min.js"></script>
 <script>
     $(function () {
       $("#").responsiveSlides({
@@ -40,7 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       });
     });
 </script>
-<script src="./js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script src="${ctx}/resources/js/easyResponsiveTabs.js" type="text/javascript"></script>
 		    <script type="text/javascript">
 			    $(document).ready(function () {
 			        $('#horizontalTab').easyResponsiveTabs({
@@ -84,8 +86,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </div>
 			 </div>
 			 <!----search-scripts---->
-			 <script src="./js/classie.js"></script>
-			 <script src="./js/uisearch.js"></script>
+			 <script src="${ctx}/resources/js/classie.js"></script>
+			 <script src="${ctx}/resources/js/uisearch.js"></script>
 			   <script>
 				 new UISearch( document.getElementById( 'sb-search' ) );
 			   </script>
@@ -98,9 +100,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="header_bottom">
 	<div class="container">	 			
 		<div class="logo">
-		  <a href="index.html"><img src="./images/logo.png" alt=""/></a>
+		  <a href="${ctx}/productAction_index.action"><img src="${ctx}/resources/images/logo.png" width="200px"  alt=""/></a>
 		</div>	
-		<div class="header_bottom_right">			
+		<div class="header_bottom_right" style="margin-top:55px; ">			
 	        <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
@@ -125,19 +127,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</li>
 					<li><a href="products.html">Clearence</a></li>
 				</ul>
-				<script type="text/javascript" src="./js/nav.js"></script>
+				<script type="text/javascript" src="${ctx}/resources/js/nav.js"></script>
 	      </div><!-- end h_menu4 -->
 		  <div class="shopping_cart">
 		 	<ul class="shopping_cart_top">
 			    <a href="#">
 				   <li class="shop_left">Your cart</li>
-				   <li class="shop_right"><img src="./images/arrow1.png" alt=""/></li>
+				   <li class="shop_right"><img src="${ctx}/resources/images/arrow1.png" alt=""/></li>
 				    <div class="clearfix"></div>	
 				</a>
 			</ul>
 			<ul class="shopping_bag">
 			    <a href="#">
-				   <li class="bag_left"><img src="./images/bag.png" alt=""/></li>
+				   <li class="bag_left"><img src="${ctx}/resources/images/bag.png" alt=""/></li>
 				   <li class="bag_right"> 0 Items | $ 0</li>
 				    <div class="clearfix"></div>	
 				</a>
@@ -278,14 +280,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
        	<div class="m_3"><span class="left_line"> </span><h3>Favourite Brands</h3><span class="right_line"> </span></div>
        	<div class="container">
        		<ul class="brands_list">
-       		  <li><img src="./images/br1.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br2.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br3.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br4.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br5.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br6.jpg" class="img-responsive" alt=""/></li>
-       		  <li><img src="./images/br7.jpg" class="img-responsive" alt=""/></li>
-       		  <li class="brand_last"><img src="./images/br8.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br1.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br2.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br3.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br4.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br5.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br6.jpg" class="img-responsive" alt=""/></li>
+       		  <li><img src="${ctx}/resources/images/br7.jpg" class="img-responsive" alt=""/></li>
+       		  <li class="brand_last"><img src="${ctx}/resources/images/br8.jpg" class="img-responsive" alt=""/></li>
        		  <div class="clearfix"> </div>
        		</ul>
        	</div>
@@ -298,7 +300,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
        </div>
        <div class="grid-2">
        	<div class="container">
-       		<p>We accept<img src="./images/paypal.png" class="img-responsive" alt="" align="middle" /></p>
+       		<p>We accept<img src="${ctx}/resources/images/paypal.png" class="img-responsive" alt="" align="middle" /></p>
        	</div>
        </div>
        <div class="footer_top">
@@ -356,7 +358,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
        		</div>
        		<div class="col-sm-2">
-       			<img src="./images/secure.png" alt=""/>
+       			<img src="${ctx}/resources/images/secure.png" alt=""/>
        		</div>
        	</div>
        </div>

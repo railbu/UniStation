@@ -15,11 +15,10 @@ public class Category {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.AUTO)
-	
-	public long getId() {
+	public long getCategory_id() {
 		return category_id;
 	}
-	public void setId(long id) {
+	public void setCategory_id(long category_id) {
 		this.category_id = category_id;
 	}
 	public String getName() {
@@ -34,6 +33,7 @@ public class Category {
 	public void setParent_id(long parent_id) {
 		this.parent_id = parent_id;
 	}
+	
 	
 	
 
