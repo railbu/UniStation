@@ -1,5 +1,9 @@
 package shop.model;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +22,12 @@ public class User {
 	private String name;
 	private byte[] photo;
 	private String photoInDisk;
+	//2015.10  添加 个人信息显示属性
+	private String birthaday;
+	private int male;
+	private String mobile;
+	private Timestamp last_login_time;
+	
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.AUTO)
@@ -75,5 +85,32 @@ public class User {
 	public void setPhotoInDisk(String photoInDisk) {
 		this.photoInDisk = photoInDisk;
 	}
+	public String getBirthaday() {
+		return birthaday;
+	}
+	public void setBirthaday(String birthaday) {
+		this.birthaday = birthaday;
+	}
+	public int getMale() {
+		return male;
+	}
+	public void setMale(int male) {
+		this.male = male;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public Timestamp getLast_login_time() {
+		return last_login_time;
+	}
+	public void setLast_login_time(Timestamp last_login_time) {
+		this.last_login_time = last_login_time;
+	}
+
+
+	
 	
 }

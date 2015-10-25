@@ -35,5 +35,11 @@ public class UserService {
 	public void add(User userinfo) {
 	        userDao.add(userinfo);
 	    }
+	//修改用户信息
+	public void update(User userinfo){
+		System.out.println("执行 进入更新服务 ");
+		userDao.update(userinfo);
+		System.out.println("退出更新服务");
+	}
 
 }

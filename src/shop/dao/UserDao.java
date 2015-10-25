@@ -28,6 +28,7 @@ public class UserDao extends HibernateDaoSupport{
 
 		return user;
 	}
+
 	
 	@SuppressWarnings("unchecked")
 	public List<User> findAllByType(int type){
@@ -54,11 +55,18 @@ public class UserDao extends HibernateDaoSupport{
 		return user;
 	}
 	
+
+	
 	public User loadUser(Long userId){
 		return (User) super.getSession().load(User.class, userId);
 	}
 
-	 public void add(User userinfo) {
+	public void add(User userinfo) {
 	        this.getHibernateTemplate().save(userinfo);
-	    }
-	    }
+	}
+	//修改用户信息
+	public void update(User userinfo){
+		this.getHibernateTemplate().update(userinfo);
+		System.out.println("数据库已更新");
+	}
+}

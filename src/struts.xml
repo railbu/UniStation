@@ -22,6 +22,11 @@
 		    <result name="admin" type="redirect">/1Admin/admin_list.action</result>
 		    <result name="customer">/2Customer/home.jsp</result>
 		</action>
+		//用户信息修改
+		<action name="userModifyAction_*" method="{1}" class="shop.action.UserModifyAction">
+		    <result name="input">login.jsp</result>
+		    <result name="success">/2Customer/home.jsp</result>
+		</action>
 		
 		<action name="productAction_*" method="{1}" class="shop.action.ProductAction">
 		    <result name="list">index.jsp</result>
